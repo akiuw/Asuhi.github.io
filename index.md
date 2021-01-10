@@ -22,6 +22,5 @@
 * ###[**网络编程**](./网络编程/linux.md)
 * ###[**Python**](./python/index.md)
 * ###[**MySQL**](./mysql/index.md)
-* ###[**常用英文单词翻译**](english.md)
 * ###[**go语言入门细节**](./golang/index.md)
 * ###[**图形**](cg/index.md)
