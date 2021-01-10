@@ -64,6 +64,7 @@ int main() {
 （)操作符叫做function call操作符
 标准库中的仿函数：
 例如
+
 ```
 //判断是否是类型T
 template <class T>
