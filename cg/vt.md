@@ -1,4 +1,4 @@
-##virtual texture
+virtual texture
 
 参考：https://zhuanlan.zhihu.com/p/138484024
 
@@ -9,7 +9,9 @@ Software Virtual Texture：
 > 传统贴图加载方式：近处的物体加载分辨率较高的mipmap（层数较低），远处的物体（一个像素占比较多）加载分辨率较低的mipmap（层数较高）
 > svt会吧普通的贴图分成不同的page(默认128*128) 根据是否需要被渲染，来决定是否加载到内存里面去。
 
-###如何地址映射
+
+
+如何地址映射
 
 **1 四叉树**
 
