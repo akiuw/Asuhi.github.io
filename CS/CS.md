@@ -21,9 +21,11 @@ namespace WindowsFormsApp1
     }
 }
 ```
+
 属性：存储数据，组合起来表示这个对象状态。
 方法：函数。
 事件：类或对象通知其他类。C#特有。
+
 
 ```
 //using ......
@@ -49,6 +51,7 @@ namespace WpfApp
 }
 ```
 
+
 ![](image/Timer.png)
 
 每一秒更新一次时间
@@ -72,6 +75,7 @@ namespace WpfApp
 
 动态类型：dynamic 
 类似于js里面的var关键字
+
 
 ```
     static void Main(string[] args)

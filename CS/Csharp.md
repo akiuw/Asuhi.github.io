@@ -8,11 +8,11 @@
 
 ```
 //long int short sbyte 从大到小
-	long l = 1;
-	int i = 0;
-	l = i; //隐试转换
-	i = l; //错误
-	
+  long l = 1;
+  int i = 0;
+  l = i; //隐试转换
+  i = l; //错误
+  
 // ulong > uint > ushort > byte
 // decimal 不参与 double > float
 decomal de = 1.1m;
@@ -21,6 +21,7 @@ float f = 1.1f;
 //decomal  不能用隐试转换 存储double 和float
 
 ```
+
 
 大类型之间的转换
 
@@ -74,7 +75,8 @@ i = f; // 报错 不能将浮点转化到整数
 
 ## get和set
 
-```c#
+
+```
 class Person{
   private string name;
   private bool sex;
@@ -124,7 +126,7 @@ static void main(){
 
 
 
-```C#
+```
 class Person{
   private string name;
   private int age;
@@ -196,7 +198,7 @@ class Person{
 
 
 
-```C#
+```
     static class Tools{
         //为int拓展了一个成员方法
         //value 代表使用这个方法的实例化后的对象
@@ -245,48 +247,48 @@ class Person{
 
 效果都是一样没区别 结果是前++
 
-```C#
-	class Point
-	{
-		public int x;
-		public int y;
+```
+  class Point
+  {
+    public int x;
+    public int y;
 
-		public Point(int x, int y)
-		{
-			this.x = x;
-			this.y = y;
-		}
-		public Point(Point p)
-		{
-			this.x = p.x;
-			this.y = p.y;
-		}
-		//(p1 + p2)
-		public static Point operator +(Point p1, Point p2)
-		{
-			Point p = new Point(0, 0);
-			p.x = p1.x + p2.x;
-			p.y = p2.y + p2.y;
-			return p;
-		}
+    public Point(int x, int y)
+    {
+      this.x = x;
+      this.y = y;
+    }
+    public Point(Point p)
+    {
+      this.x = p.x;
+      this.y = p.y;
+    }
+    //(p1 + p2)
+    public static Point operator +(Point p1, Point p2)
+    {
+      Point p = new Point(0, 0);
+      p.x = p1.x + p2.x;
+      p.y = p2.y + p2.y;
+      return p;
+    }
 
-		//只能(p1 + value) 不能(value + p1)
-		public static Point operator +(Point p1, int value)
-		{
-			Point p = new Point(0, 0);
-			p.x = p1.x + value;
-			p.y = p1.y + value;
-			return p;
-		}
+    //只能(p1 + value) 不能(value + p1)
+    public static Point operator +(Point p1, int value)
+    {
+      Point p = new Point(0, 0);
+      p.x = p1.x + value;
+      p.y = p1.y + value;
+      return p;
+    }
 
-		public static Point operator ++(Point p)
-		{
-			p.x += 1;
-			p.y += 1;
-			return p;
-		}
-	}
-	class Program
+    public static Point operator ++(Point p)
+    {
+      p.x += 1;
+      p.y += 1;
+      return p;
+    }
+  }
+  class Program
     {
         static void Main(string[] args)
         {
@@ -315,16 +317,16 @@ class Person{
 
 前++先进行++操作在使用变量的值
 
-```C#
-	struct Point
-	{
+```
+  struct Point
+  {
         public int x;
         public int y;
-		public Point(int x, int y)
-		{
+    public Point(int x, int y)
+    {
             this.x = x;
             this.y = y;
-		}
+    }
 
         public Point(Point p)
         {
@@ -332,12 +334,12 @@ class Person{
             this.y = p.y;
         }
         static public Point operator ++(Point p)
-		{
+    {
             p.x += 1;
             p.y += 1;
             return p;
-		}
-	}
+    }
+  }
 
 class Program
     {
@@ -364,7 +366,7 @@ class Program
 
 >  把一个类分成几部分申明，可以写到不同到脚本文件里面
 >
-> 也可以把方法分开生命和实现
+>  也可以把方法分开生命和实现
 
 
 
@@ -397,10 +399,10 @@ partial class Student{
 
 >  任何父类出现的地方可以用子类替代
 >
-> 1. is 返回一个对象是否为指定类对象 返回bool值
-> 2. as 返回一个指定类型的对象，成功返回对象，失败返回null
+>  1. is 返回一个对象是否为指定类对象 返回bool值
+>  2. as 返回一个指定类型的对象，成功返回对象，失败返回null
 
-```C#
+```
 class GameObject{}
 
 class Player:GameObject{
@@ -430,7 +432,6 @@ static void main(){
     p.PlayerAtk();// 调用方法
   }
 }
-
 
 ```
 
