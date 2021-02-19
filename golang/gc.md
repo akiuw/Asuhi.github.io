@@ -1,6 +1,6 @@
 
 
-##go内存管理 gc原理 协程调度
+#go内存管理 gc原理 协程调度
 
 
 https://zhuanlan.zhihu.com/p/91143269  go内存管理中译
@@ -8,6 +8,7 @@ https://zhuanlan.zhihu.com/p/91143269  go内存管理中译
 https://zhuanlan.zhihu.com/p/95056679 万字长文，Golang Runtime
 
 https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
+
 
 ##协程结构体以及实现概念
 
@@ -30,8 +31,8 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
 ![](images/go1.1中的GPM模型.png)
 
-![](images/go1.1模型2.png)
 
+![](images/go1.1模型2.png)
 
 
 
@@ -42,8 +43,6 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
 
 ![](images/GMP网络1.png)
-
-
 
 
 
@@ -147,6 +146,8 @@ func main(){
 
 
 ```
+
+
 
 
 
