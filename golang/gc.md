@@ -11,7 +11,11 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
 ##协程结构体以及实现概念
 
+
+
 **调度模型的发展是不断减少切换成本，不断共享的**
+
+
 
 
 ![](images/go实现有栈协程.png)
@@ -19,13 +23,16 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
 ![](images/go执行流结构体.png)
 
+
+
 ##GM模型
 
 
 ![](images/go1.1中的GPM模型.png)
 
-
 ![](images/go1.1模型2.png)
+
+
 
 
 1. 每个线程都有一个本地缓存mcache
@@ -33,7 +40,12 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 3. 当p没有G执行时回去从全局或者其他P的队列里面拿出G执行(work steeling) 
 
 
+
 ![](images/GMP网络1.png)
+
+
+
+
 
 
 1. 对于epoll的封装，所有网络fd都是以边沿模式，NONBLOCK模式挂到epoll节点中
@@ -84,6 +96,8 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
 
 **类型T1的尺寸不能小于T2**
+
+
 
 ```go
 func Float64Bits(f float64) *uint64{
