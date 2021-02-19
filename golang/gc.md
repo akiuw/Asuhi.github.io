@@ -1,7 +1,6 @@
 
 
-
-# go内存管理 gc原理 协程调度
+##go内存管理 gc原理 协程调度
 
 
 https://zhuanlan.zhihu.com/p/91143269  go内存管理中译
@@ -10,7 +9,7 @@ https://zhuanlan.zhihu.com/p/95056679 万字长文，Golang Runtime
 
 https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
-## 协程结构体以及实现概念
+##协程结构体以及实现概念
 
 **调度模型的发展是不断减少切换成本，不断共享的**
 
@@ -20,8 +19,7 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
 ![](images/go执行流结构体.png)
 
-
-## GM模型
+##GM模型
 
 
 ![](images/go1.1中的GPM模型.png)
@@ -48,7 +46,7 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
 
 
-## 非类型安全指针
+##非类型安全指针
 
 
 
@@ -77,7 +75,7 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
 
 
-### 非类型安全指针使用
+###非类型安全指针使用
 
 
 

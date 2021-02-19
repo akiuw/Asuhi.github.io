@@ -1,7 +1,7 @@
-##  map slice string interface{} 协程安全探讨
+#map slice string interface{} 协程安全探讨
 
-### map
-	
+##map
+
 (1) 使用锁+普通map
 		
 ```
@@ -14,7 +14,8 @@ type SafeMap struct {
 (2) 使用sync.map
 (3) 使用chan+普通map
 	
-### slice
+
+##slice
 
 ##go语言sync各个类的使用
 
@@ -25,7 +26,7 @@ type SafeMap struct {
 	mutex.Lock()
 	// Update共享变量 (比如切片，结构体指针等)
 	mutex.Unlock()
-```	
+```
 
 ###sync.RWMutex 读写锁
 
