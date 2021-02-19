@@ -6,7 +6,7 @@
 
 
 
-```go
+```
 func main() {
 	ctx, cancel := context.WithCancel(context.Background()) //初始化context 返回ctx句柄和cancel函数
     //cancel用来取消所有的ctx
@@ -57,7 +57,7 @@ g2 stoped...
 
 ##context接口
 
-```go
+```
 type Context interface {
 	// 当 context 被取消或者到了 deadline，返回一个被关闭的 channel
 	Done() <-chan struct{}
@@ -85,7 +85,7 @@ type Context interface {
 
 
 
-```go
+```
 func WithCancel(parent Context) (ctx Context, cancel CancelFunc)
 func WithDeadline(parent Context, deadline time.Time) (Context, CancelFunc)
 func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)
