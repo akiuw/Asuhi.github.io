@@ -99,7 +99,7 @@ https://www.bilibili.com/video/BV1oE411y7qG 上面文章对应的视频
 
 
 
-```go
+```
 func Float64Bits(f float64) *uint64{
     return *(*uint64)(unsafe.Pointer(&f))
 }
@@ -132,7 +132,7 @@ ptr2 = unsafe.Pointer(uintptr(ptr1) &^ 7)
 
 
 
-```go
+```
 type T struct{x bool; y [3]int16}
 
 const N = unsafe.Offsetof(T{}.y)
