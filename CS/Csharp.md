@@ -370,7 +370,7 @@ class Program
 
 
 
-```C#
+```
 partial class Student{
   public bool sex;
   public string name;
