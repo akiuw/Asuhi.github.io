@@ -21,6 +21,8 @@
 
 * [**网络编程**](./网络编程/linux.md)
 
+* [**计算机网络基础**](./计算机网络/index.md)
+
 * [**Python**](./python/index.md)
 
 * [**MySQL**](./mysql/index.md)
