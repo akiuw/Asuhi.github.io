@@ -91,3 +91,11 @@ writePoint(slot,ptr):
 
 ![](images/混合写屏障.png)
 
+## gc 触发方式
+
+1. 手动触发 `runtime.GC()`
+2. 分配内存时需要检测是否需要触发gc, `runtime.mallocgc` 每次gc会在标记结束后设置下一次触发GC的堆内存分配量，`memstats.gc_trigger`。分配内存时会判断是否达到了这里的`gc_trigger`
+3. `sysmon`监控线程强制执行GC，在runtime包被初始化时，会创建一个`runtime.forcegchelper()`为入口的协程。只不过这个协程会很快休眠，监控线程`sysmon`检测到距离上次gc已经超时会将这个协程加入到全局runq中。
+
+
+
