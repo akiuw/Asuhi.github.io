@@ -96,4 +96,38 @@ DB_TRX_ID: 1 undolog中链表头
 DB_TRX_ID == 4 在trx_ids中 说明readview生成时这个事务还在活跃没有提交所以对于DB_TRX_ID ==4这个记录是不可见的。
 
 
+## 原子性
+
+使用undolog 进行事务回滚，执行失败时会根据rollbackptr回滚
+
+## 隔离性
+
+mvcc根据不同的隔离级别生成不同的readview对事务可见性进行判断。
+
+## 持久性
+
+> 对于磁盘来说，随机读写远慢与顺序读写。(append比较快)
+
+mysql会将每次操作写入redolog
+
+### 两次提交
+
+> mysql修改数据一般会先读入内存
+修改完后将操作写入redolog 此次写redolog并不能算已经持久化，这条记录会记录为prepare阶段
+然后mysql会写binlog保证这两个log的一致性。随后将prepare阶段的redolog改commit状态.
+
+
+
+### 快照读和当前读
+
+当前读 操作
+select  ... lock in share mode;
+select ... for update;
+update
+delete
+insert
+
+快照读 操作
+
+select ...
  
