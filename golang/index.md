@@ -8,8 +8,6 @@
 
 ###[**逃逸分析**](逃逸分析.md)
 
-###[**GMP设计思想**](GMP模型与设计思想.md)
-
 ###[**context上下文**](context.md)
 
 ###[**golang gc 简述**](golanggc.md)
